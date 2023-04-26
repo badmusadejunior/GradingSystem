@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+<style>
+    .w-35{
+        width:35% !important;
+        margin-top: 12%;
+    }
+    body{
+        background-image: url(./cool-geometric-triangular-figure-neon-laser-light-great-backgrounds.jpg);
+    }
+</style>
+<body>
+    <div class="card w-35 mx-auto" style="width: 18rem;">
+        <img src="./Media/gradechecker.jpg" class="card-img-top" alt="..." height="350px" id="imgSrc">
+        <div class="card-body">
+          <h5 id="display" class="card-title text-center display-4 fw-bold" >✌</h5>
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+        </div>
+        <!-- <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul> -->
+           
+<div class="input-group mb-3">
+    <input id="check" type="number" class="form-control" placeholder="Enter Your Score" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button onclick="verifyScore()" class="btn btn-outline-secondary" type="button" id="button-addon2">Check  Your Grade</button>
+  </div>
+        
+      </div>
+    <!-- <div id="display"></div> -->
+    <!-- <button onclick="verifyScore()">Check your score</button>
+    <input type="number" id="check"> -->
+    <script>
+      var mySongA = new Audio("excellent.wav")
+      var mySongB = new Audio("Good.wav")
+      var mySongC = new Audio("Credit.mp3")
+      var mySongD = new Audio("Fair.mp3")
+      var mySongE = new Audio("poor.m4a")
+      var mySongF = new Audio("Failure.m4a")
+      function verifyScore(){
+        var score = document.getElementById("check").value;
+    // if(score==""){
+    //     document.getElementById("display").innerText = "Enter a number"
+    if(score<0){
+        document.getElementById("display").innerText = "Invalid"
+    }else if(score<40){
+        document.getElementById("display").innerText = "F"
+        imgSrc.src = "failure.webp"
+        mySongF.play();
+    }else if(score<45){
+        document.getElementById("display").innerText = "E"
+        imgSrc.src = "E.webp"
+        mySongE.play();
+    }else if(score<50){
+        document.getElementById("display").innerText = "D"
+        imgSrc.src = "D.webp"
+        mySongD.play();
+    }else if(score<60){
+        document.getElementById("display").innerText = "C"
+        imgSrc.src = "C.webp"
+        mySongC.play();
+    }else if(score<70){
+        document.getElementById("display").innerText = "B"
+        imgSrc.src = "B.webp"
+        mySongB.play();
+    }else if(score<101){
+        document.getElementById("display").innerText = "A"
+        imgSrc.src = "excellent.webp"
+        mySongA.play();
+    }else if(score>100){
+        document.getElementById("display").innerText = "Invalid"
+
+    }else{
+        document.getElementById("display").innerText = "Kindly enter a number"
+    } 
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
